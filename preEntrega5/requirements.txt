@@ -1,0 +1,7 @@
+langchain
+langchain-core
+langgraph
+langgraph-checkpoint-sqlite
+aiosqlite
+langchain-google-genai
+python-dotenv
