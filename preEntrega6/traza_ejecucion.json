@@ -1,0 +1,52 @@
+{
+  "consulta_1": {
+    "pregunta": "Compará el gasto promedio por pedido de Ana García y Juan Pérez, y decime quién gasta más por pedido.",
+    "traza": [
+      {
+        "nodo": "supervisor",
+        "contenido": "investigador: No hay aportes previos. Se necesita primero que el investigador recopile los datos de los pedidos de ambos clientes antes de que el analista pueda calcular el promedio."
+      },
+      {
+        "nodo": "investigador",
+        "contenido": "- Cliente: Ana García\n  - cliente_id: 102\n  - Pedidos (montos): [4200, 5300, 5000]\n\n- Cliente: Juan Pérez\n  - cliente_id: 205\n  - Pedidos (montos): [3200]"
+      },
+      {
+        "nodo": "supervisor",
+        "contenido": "analista: El investigador ya recopiló los datos de ambos clientes, por lo que ahora corresponde al analista realizar los cálculos y la comparación solicitados por el usuario."
+      },
+      {
+        "nodo": "analista",
+        "contenido": "**Resultados del análisis:**\n\n* **Ana García:**\n  * Cantidad de pedidos: 3\n  * Total gastado: $14,500\n  * **Gasto promedio por pedido: $4,833.33**\n\n* **Juan Pérez:**\n  * Cantidad de pedidos: 1\n  * Total gastado: $3,200\n  * **Gasto promedio por pedido: $3,200.00**\n\n**Conclusión:**\n**Ana García** gasta más en promedio por pedido que Juan Pérez. Su promedio es un **51.04%** mayor que el de Juan Pérez."
+      },
+      {
+        "nodo": "supervisor",
+        "contenido": "FINISH: El investigador aportó los datos de ambos clientes y el analista realizó correctamente los cálculos y la comparación solicitada basándose en dichos datos, cumpliendo todos los puntos de la rúbrica."
+      },
+      {
+        "nodo": "responder",
+        "contenido": "Según los datos analizados:\n\n* **Ana García** tiene un gasto promedio por pedido de **$4,833.33** (con un total de 3 pedidos por $14,500).\n* **Juan Pérez** tiene un gasto promedio por pedido de **$3,200.00** (con 1 pedido por $3,200).\n\n**Conclusión:** \n**Ana García** gasta más por pedido que Juan Pérez."
+      }
+    ]
+  },
+  "consulta_2": {
+    "pregunta": "¿Cuál es el gasto promedio por pedido de Roberto Sánchez?",
+    "traza": [
+      {
+        "nodo": "supervisor",
+        "contenido": "investigador: Se necesitan los datos de los pedidos del cliente Roberto Sánchez antes de poder calcular el gasto promedio."
+      },
+      {
+        "nodo": "investigador",
+        "contenido": "No se encontró ningún cliente con el nombre 'Roberto Sánchez'. (ERROR: no se encontró ningún cliente con el nombre 'Roberto Sánchez'.)"
+      },
+      {
+        "nodo": "supervisor",
+        "contenido": "FINISH: El investigador informó que no existe ningún cliente con el nombre 'Roberto Sánchez'. Según la rúbrica, cuando un dato no existe no se debe insistir y se debe finalizar para informarlo."
+      },
+      {
+        "nodo": "responder",
+        "contenido": "No se pudo responder a tu pregunta porque, según los datos disponibles, no se encontró ningún cliente con el nombre 'Roberto Sánchez'."
+      }
+    ]
+  }
+}
